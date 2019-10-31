@@ -1,0 +1,296 @@
+/*****body and html setting*****/
+html
+{
+  height:100%;
+}
+body
+{
+  font: 1rem/1.5 Arial, Helvetica,sans-serif;
+  background-color:#f4f4f4;
+  display:flex;
+  flex-direction: column;
+  height:100%;
+}
+h1
+{
+  font-size: 1.8rem;
+}
+/*****-----layout by flex-----*****/
+.wrapper
+{
+  flex:1 0 auto;
+  display:grid;
+  grid-template-columns: 25%  50%  25%;
+  grid-template-rows: 1fr  1fr  1fr;
+  grid-gap: 1rem;
+  margin-bottom: 0.6rem;
+}
+@media screen and (max-width: 768px)
+{
+  .wrapper
+  {
+    flex:1 0 auto;
+    display:grid;
+    grid-template-columns: 2.5%  95%  2.5%;
+    grid-template-rows: 1fr  1fr  1fr;
+    grid-gap: 1rem;
+    margin-bottom: 0.6rem;
+  }
+}
+header
+{
+  flex: 0 0 auto;
+  background: #f4f4f4;
+  color: black;
+  padding-top: 1rem;
+  min-height: 5rem;
+  border-bottom: red 0.125rem solid;
+}
+footer
+{
+  flex: 0 0 auto;
+  color:#ffffff;
+  background-color:#e8491d;
+  text-align: center;
+}
+/******* some global setting *******/
+.MyImg
+{
+  width: 100%;
+  object-fit: cover;
+}
+/*******------------Start each page settings ----------*******/
+/******* Search and results page setting *******/
+.M1-search
+{
+  text-align: center;
+  grid-column:1/4;
+  grid-row:1/2;
+  align-self: stretch;
+}
+.wrapper .M1-search
+{
+  background:url('../img/welcome1x.jpg') no-repeat 0 -550px;
+}
+#addressSearch
+{
+  height:1.8rem;
+  width:30rem;
+  font-size: 1.25rem;
+}
+#mysubmit
+{
+  padding-left:1.6rem;
+  padding-right:1.6rem;
+  height:2.4rem;
+  font-size: 1.25rem;
+}
+
+.M2-results
+{
+  grid-column:2/3;
+  grid-row:2/4;
+  align-self: center;
+
+  display: grid;
+  grid-gap: 1em;
+}
+#smap
+{
+  height: 25rem;
+}
+/******* A sample individual object page *******/
+#hmap
+{
+  height: 25rem;
+}
+.subwrapper
+{
+  text-align: center;
+  grid-column:2/3;
+  grid-row:1/4;
+  align-self: stretch;
+  grid-auto-rows: minmax(12rem,auto);
+}
+.M1-imgPart
+{
+  text-align: center;
+  align-self:stretch;
+}
+.M2-mapPart
+{
+  text-align: center;
+  align-self: stretch;
+  height: 400px;
+}
+.M3-commentPart
+{
+  text-align: center;
+  align-self: center;
+  grid-gap: 1em;
+}
+.comment-wrap
+{
+  display: grid;
+  grid-template-rows: minmax(min-content,min-content) 2fr;
+}
+.comment-block1
+{
+    align-self: stretch;
+    background-color: #e8491d;
+    font-size: 1rem;
+}
+.comment-block2
+{
+    align-self: stretch;
+}
+textarea
+{
+  font-size: 1rem;
+  text-align:left;
+  width: 100%;
+}
+/******* login page setting *******/
+.M-login
+{
+  grid-column:2/3;
+  grid-row:1/4;
+
+  align-self: center;
+  justify-self: center;
+  text-align: left;
+
+  font-size: 1.25rem;
+  padding-bottom: 1.0rem;
+
+  background: #D3D3D3;
+}
+.M-login input[type="submit"]
+{
+  height:1.8rem;
+  width: 10rem;
+  font-size: 1.2rem;
+
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  margin-left: 4.8rem;
+  margin-right: auto;
+}
+/******* user registration page setting *******/
+.M-register
+{
+  grid-column:2/3;
+  grid-row:1/4;
+
+  align-self: center;
+  justify-self: center;
+  text-align: left;
+
+  font-size: 1.25rem;
+  padding-bottom: 1.0rem;
+
+  background: #D3D3D3;
+}
+.form-group
+{
+  margin-left: 2rem;
+  margin-right: 2rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.form-control
+{
+  height:1.6rem;
+  width: 15rem;
+  font-size: 1.2rem;
+}
+.M-register input[type="submit"]
+{
+  height:1.8rem;
+  width: 10rem;
+  font-size: 1.2rem;
+
+  /* padding-left:1.5rem;
+  padding-right:1.5rem; */
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+  margin-left: 4.8rem;
+  margin-right: auto;
+}
+/*******An object submission page setting*******/
+.M-addNew
+{
+  grid-column:2/3;
+  grid-row:1/4;
+  align-self: center;
+  justify-self: center;
+
+  background: #D3D3D3;
+  padding-right: 3rem;
+}
+.M-addNew p
+{
+  margin-left: 1.25rem;
+}
+.M-addNew input
+{
+  margin-left: 1.25rem;
+  height:2rem;
+  font-size: 1.25rem;
+}
+.M-addNew input[type="button"]
+{
+  padding-left:2rem;
+  padding-right:2rem;
+  margin-bottom: 0.6rem;
+}
+.M-addNew textarea
+{
+  margin-left: 1.25rem;
+  font-size: 1.25rem;
+  width: 100%;
+}
+/****** header setting *******/
+header a
+{
+  color: black;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.25rem;
+}
+header .branding
+{
+  float:left;
+}
+header .branding h1
+{
+  margin: 0;
+}
+header nav
+{
+  float:right;
+  margin-top:1.25rem;
+}
+header .current a
+{
+  color:red;
+  font-weight: bold;
+}
+header a:hover
+{
+  color:black;
+  font-weight: bold;
+}
+header ul
+{
+  margin:0;
+  padding:0;
+}
+header li
+{
+   margin: 0;
+   float:left;
+   display: inline;
+   padding: 0 1.0rem 0 1.0rem;
+}
+/****** header setting *******/

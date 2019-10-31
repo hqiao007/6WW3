@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width,initial-scale=1">
+     <meta name="author" content="Hua QIAO">
+     <title>A Restaurant Review Site | Welcome</title>
+     <link rel="stylesheet" href="./css/style.css">
+  </head>
+  <body>
+    <header>
+      <div class="branding">
+        <h1>Restaurant Review</h1>
+      </div>
+      <span>
+      <a href="http://jigsaw.w3.org/css-validator/check/referer">
+        <img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss" alt="Valid CSS!" />
+      </a>
+      </span>
+      <nav>
+          <ul>
+            <li class="current"><a href="index.html">Home</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="AddNewObj.html">AddNew</a></li>
+          </ul>
+      </nav>
+    </header>
+
+    <div class="wrapper">
+      <div class="M1-search">
+        <div class="test">
+        <h1>Find best chinese restaurants around you</h1>
+        <form>
+          <input type="text" id="addressSearch" name="text" placeholder="for example: China Kiki">
+          <button type="button" id="mysubmit">Submit</button>
+        </form>
+       </div>
+      </div>
+
+      <div class="M2-results">
+            <a href="ObjDetailExp.html">China KiKi</a>
+            <label id="mylabel">name, address</label>
+            <div id="smap"></div>
+      </div>
+    </div>
+
+    <!--Google Maps scripts-->
+    <script src="Googlemapscript1.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBOqL7jC1Glm7tnCuChhdynluo03w5-YNQ&libraries=places&callback=initAutocomplete"
+         async defer>
+    </script>
+
+    <footer>
+      <p>6WW3 course project, Hua QIAO; 2019</p>
+    </footer>
+  </body>
+</html>

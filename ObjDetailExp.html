@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width">
+     <meta name="author" content="Hua QIAO">
+     <title>A Restaurant Review Site | Welcome</title>
+     <link rel="stylesheet" href="./css/style.css">
+
+  </head>
+  <body>
+    <header>
+      <div class="branding">
+        <h1>Restaurant Review</h1>
+      </div>
+      <nav>
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="login.html">Login</a></li>
+            <li><a href="register.html">Register</a></li>
+            <li><a href="AddNewObj.html">AddNew</a></li>
+          </ul>
+      </nav>
+    </header>
+
+    <div class="wrapper">
+
+    <div class="subwrapper">
+      <div class="M1-imgPart">
+        <br><span style="font-size:1.25rem; color:#e8491d; font-weight:bold;">Introduction Video</span>
+        <div id="Myvideo">
+          <video controls class="video">
+            <source src="./img/ChinaKiKi.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+          </video>
+        </div>
+      </div>
+
+      <div class="M2-mapPart" itemscope itemtype="http://schema.org/Restaurant">
+        <br><span style="font-size:1.25rem; color:#e8491d; font-weight:bold;" itemprop="name">ChinaKiKi:</span>
+        <div itemprop="address" itemscope itemtype="http://schema.org/PostalAddress">
+          <span itemprop="streetAddress">491 Upper Wellington St.</span>
+          <span itemprop="addressLocality">Hamilton</span>, <span itemprop="addressRegion">ON</span><span itemprop="postalCode">L9A 3P3</span>
+        </div>
+        <div id="hmap"></div>
+      </div>
+
+      <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBOqL7jC1Glm7tnCuChhdynluo03w5-YNQ&libraries=places"></script>
+      <script src="Googlemapscript2.js"></script>
+      <script>
+         google.maps.event.addDomListener(window, 'load', init);
+      </script>
+
+      <div class="M3-commentPart">
+        <br><span style="font-size:1.25rem; color:#e8491d; font-weight:bold;">COMMENTS</span>
+        <div class="comment-wrap" itemscope itemtype="http://schema.org/Review">
+            <div class="comment-block1">
+              <span itemprop="author">Lucas 1</span><span>------</span><time itemprop="datePublished" datetime="2019-09-15">2019-09-15</time>
+              <div itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
+                <meta itemprop="worstRating" content = "1"/>
+                <span itemprop="ratingValue">4</span>/<span itemprop="bestRating">5</span>stars
+                <span>★★★★☆</span>
+              </div>
+            </div>
+            <div class="comment-block2">
+                <textarea cols="30" rows="8" class="comment-text" itemprop="description">One of the best local Chinese food locations in the Hamilton area.The bbq pork dish is always my favourite. I can't say enough about all the dishes. Fantastic!</textarea>
+           </div>
+        </div>
+
+        <div class="comment-wrap" itemscope itemtype="http://schema.org/Review">
+            <div class="comment-block1">
+              <span itemprop="author">Lucas 2</span><span>------</span><time itemprop="datePublished" datetime="2019-09-25">2019-09-25</time>
+              <div itemprop="reviewRating" itemscope itemtype="http://schema.org/Rating">
+               <meta itemprop="worstRating" content = "1"/>
+               <span itemprop="ratingValue">3</span>/<span itemprop="bestRating">5</span>stars
+               <span>★★★☆☆</span>
+              </div>
+            </div>
+            <div class="comment-block2">
+                <textarea cols="30" rows="8" class="comment-text" itemprop="description">We order Chinese food here once or twice a year and are usually not disappointed.The last time though they did not send the Fried Rice and we had to go back and pick it up.The food is just OK but they have an extensive menu.The staff are also very nice.Will continue to use their services</textarea>
+           </div>
+        </div>
+      </div>
+     </div>
+    </div>
+
+    <footer>
+      <p>6WW3 course project, Hua QIAO; 2019</p>
+    </footer>
+  </body>
+</html>
